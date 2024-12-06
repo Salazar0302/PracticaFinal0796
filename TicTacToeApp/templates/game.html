@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Juego{% endblock %}
+{% block content %}
+<h1>Bienvenido, {{ username }}</h1>
+<div id="game-board">
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+</div>
+<p id="winner-message"></p>
+<script src="{{ url_for('static', filename='game.js') }}"></script>
+{% endblock %}

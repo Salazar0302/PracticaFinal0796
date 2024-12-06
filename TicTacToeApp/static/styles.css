@@ -1,0 +1,169 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background: #34495e;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+header nav a:hover {
+    background-color: #2c3e50;
+    transform: scale(1.05);
+}
+
+/* Forms */
+form {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #444;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+form input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+form button {
+    background-color: #3498db;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+form p {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Game Board */
+#game-board {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+    background-color: #dcdde1;
+    transform: scale(1.1);
+}
+
+.cell.x {
+    color: #e74c3c;
+}
+
+.cell.o {
+    color: #27ae60;
+}
+
+/* Winner Message */
+#winner-message {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #16a085;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #95a5a6;
+    padding: 10px 0;
+}
