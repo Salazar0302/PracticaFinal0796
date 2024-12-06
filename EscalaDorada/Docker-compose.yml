@@ -1,0 +1,10 @@
+version: '3'
+services:
+  python_app:
+    build:
+      context: .
+      dockerfile: python_app/Dockerfile
+    ports:
+      - "5000:5000"  # Ajusta según tu configuración
+    networks:
+      - app_network

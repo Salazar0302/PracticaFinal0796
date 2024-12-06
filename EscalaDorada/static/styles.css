@@ -1,0 +1,174 @@
+/* Estilo base */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('itachi.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Formulario de entrada */
+form {
+    text-align: center;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 60%;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Flash mensaje */
+.flash-message {
+    text-align: center;
+    color: red;
+    margin: 10px;
+}
+
+.flash-message.success {
+    color: green;
+}
+
+/* Ruleta de revelación de nombres */
+#roulette-container {
+    width: 400px;
+    height: 100px;
+    border: 3px solid #fff;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+#name-display {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+    animation: revealEffect 5s linear infinite;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes revealEffect {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+ul {
+    display: none; /* Desactivamos la visualización de la lista */
+}
+
+ul li {
+    display: none;
+}
+
+/* Animaciones y transiciones */
+@keyframes spinEffect {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+button.spin-btn.active {
+    animation: spinEffect 2s ease-in-out;
+}
+
+/* Diseño del botón de logout */
+button.logout-btn {
+    background-color: #d9534f;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+button.logout-btn:hover {
+    background-color: #c9302c;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Estilos de la lista de participantes */
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    width: 400px;
+    height: 50px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+ul li {
+    width: 90px;
+    height: 50px;
+    background-color: #007bff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+}
