@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Ingrese los nombres</h1>
+<!-- Formulario para agregar participante -->
+<form action="/add" method="POST">
+    <input type="text" name="name" required>
+    <button type="submit">Agregar</button>
+</form>
+
+<!-- Lista de participantes -->
+<ul>
+    {% for participant in participants %}
+    <li>{{ participant.name }}</li>
+    {% endfor %}
+</ul>
+
+<!-- Formulario para reiniciar la lista de participantes -->
+<form action="/reset" method="GET">
+    <button type="submit">Reiniciar</button>
+</form>
+
+<!-- Botón de logout -->
+<form action="/logout" method="GET">
+    <button type="submit">Cerrar Sesión</button>
+</form>
+
+{% endblock %}

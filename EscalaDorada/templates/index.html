@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de personas</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Selector de personas</h1>
+
+        <!-- Botón de logout -->
+        <form action="/logout" method="POST">
+            <button type="submit" class="logout-btn">Cerrar sesión</button>
+        </form>
+
+        <!-- Aquí va la ruleta y el botón girar -->
+        <ul id="ruleta">
+            <!-- Aquí van los nombres en la ruleta -->
+        </ul>
+
+        <button class="spin-btn" onclick="girarRuleta()">Presiona para seleccionar</button>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
